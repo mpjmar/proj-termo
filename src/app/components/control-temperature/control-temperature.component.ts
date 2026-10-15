@@ -9,6 +9,7 @@ import { Component, input, output } from '@angular/core';
 export class ControlTemperatureComponent {
   // inputs y outputs
   temperature = input.required<number>();
+  umbral = input<number>();
   tempOutput = output<number>();
   umbralOutput = output<number>();
 
@@ -26,7 +27,7 @@ export class ControlTemperatureComponent {
     this.tempOutput.emit(this.tempUpdate);
   }
 
-  onInput(event: Event) {
+  onInputUmbral(event: Event) {
     let inputElement = event.target as HTMLInputElement;
 
     try {

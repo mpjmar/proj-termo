@@ -17,8 +17,13 @@ export class AppComponent {
   title = 'proj-termo';
 
   temperature = 20;
+  umbral = 25;
 
   onCambioTempOut(temperature: number) {
     this.temperature = temperature;
+  }
+
+  onCambiarUmbral(umbral: number) {
+    this.umbral = umbral;
   }
 }
