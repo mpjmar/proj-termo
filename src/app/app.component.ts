@@ -19,11 +19,11 @@ export class AppComponent {
   temperature = 20;
   umbral = 25;
 
-  onCambioTempOut(temperature: number) {
+  onCambioTempOutput(temperature: number) {
     this.temperature = temperature;
   }
 
-  onCambiarUmbral(umbral: number) {
+  onCambioUmbral(umbral: number) {
     this.umbral = umbral;
   }
 }
