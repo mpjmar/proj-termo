@@ -6,7 +6,12 @@
   color: white;
 }
 
+h1 {
+  color: darkcyan;
+  font-size: 50px;
+}
+
 :host(.warning) {
   background-color: red;
-  color: chartreuse;
+  color: yellow;
 }

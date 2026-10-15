@@ -22,14 +22,13 @@ export class ControlTemperatureComponent {
     this.tempOutput.emit(this.tempUpdate);
   }
 
-  onClicDecTemp() {
+  onClickDecTemp() {
     this.tempUpdate = this.temperature() - 1;
     this.tempOutput.emit(this.tempUpdate);
   }
 
   onInputUmbral(event: Event) {
     let inputElement = event.target as HTMLInputElement;
-
     try {
       let umbral = Number(inputElement.value);
       console.log('Se establece nuevo: ${umbral)');

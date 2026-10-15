@@ -12,8 +12,8 @@ import { Component, input, OnChanges, SimpleChanges } from '@angular/core';
 export class DisplayThermostateComponent implements OnChanges {
   // hooks
   ngOnChanges(changes: SimpleChanges): void {
-    if (changes['temperature']) {
-      this.alarm = changes['temperature'].currentValue > this.umbral;
+    if (changes['temperature'] || changes['umbral']) {
+      this.alarm = this.temperature() > this.umbral();
     }
   }
 

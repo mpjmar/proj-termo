@@ -1,9 +1,10 @@
 <app-control-temperature
-  [temperature]="this.temperature"
+  [temperature]="temperature"
+  [umbral]="umbral"
   (tempOutput)="onCambioTempOut($event)"
   (umbralOutput)="onCambiarUmbral($event)"
 ></app-control-temperature>
 <app-display-thermostate
-  [temperature]="this.temperature"
-  [umbral]="this.umbral"
+  [temperature]="temperature"
+  [umbral]="umbral"
 ></app-display-thermostate>

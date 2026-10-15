@@ -1,9 +1,9 @@
 <div>
-  <span>Control de Temperatura</span>
+  <span class="title">Control de Temperatura</span>
 </div>
 
 <div class="controls">
-  <button (click)="onClicDecTemp()">➖</button>
+  <button (click)="onClickDecTemp()">➖</button>
   <span> {{ temperature() }} ºC </span>
   <button (click)="onClickIncTemp()">➕</button>
 </div>
@@ -13,5 +13,10 @@
 </div>
 
 <div>
-  <input type="text" [value]="25" (input)="onInputUmbral($event)" />
+  <input
+    id="umbralValue"
+    type="text"
+    [value]="umbral()"
+    (input)="onInputUmbral($event)"
+  />
 </div>
