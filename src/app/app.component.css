@@ -1,0 +1,21 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+app-control-temperature {
+  background-color: darkcyan;
+  flex: 0 0 50%;
+  border-bottom: 5px solid rgb(114, 4, 141);
+}
+
+app-display-thermostate {
+  background-color: cyan;
+  flex: 1;
+
+  .warning {
+    font-weight: 10px;
+  }
+}
