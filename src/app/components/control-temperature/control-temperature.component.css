@@ -21,6 +21,10 @@
   padding: 5px;
 }
 
+<<<<<<< HEAD
 #umbralValue {
+=======
+input {
+>>>>>>> 0460838 (replace try catch for if else in onInputUmbral())
   text-align: center;
 }

@@ -28,13 +28,21 @@ export class ControlTemperatureComponent {
   }
 
   onInputUmbral(event: Event) {
+<<<<<<< HEAD
     let inputElement = event.target as HTMLInputElement;
     try {
       let umbral = Number(inputElement.value);
       console.log('Se establece nuevo: ${umbral)');
+=======
+    const inputElement = event.target as HTMLInputElement;
+    const umbral = Number(inputElement.value);
+
+    if (Number.isNaN(umbral)) {
+      inputElement.value = (this.umbral() ?? 0).toString();
+    } else {
+      console.log(`Se establece nuevo: ${umbral}`);
+>>>>>>> 0460838 (replace try catch for if else in onInputUmbral())
       this.umbralOutput.emit(umbral);
-    } catch (error) {
-      inputElement.value = this.temperature().toString();
     }
   }
 }
