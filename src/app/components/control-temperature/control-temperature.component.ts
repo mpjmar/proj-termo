@@ -22,7 +22,7 @@ export class ControlTemperatureComponent {
     this.tempOutput.emit(this.tempUpdate);
   }
 
-  onClicDecTemp() {
+  onClickDecTemp() {
     this.tempUpdate = this.temperature() - 1;
     this.tempOutput.emit(this.tempUpdate);
   }
