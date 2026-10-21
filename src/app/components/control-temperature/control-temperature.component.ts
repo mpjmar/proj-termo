@@ -22,18 +22,12 @@ export class ControlTemperatureComponent {
     this.tempOutput.emit(this.tempUpdate);
   }
 
-  onClickDecTemp() {
+  onClicDecTemp() {
     this.tempUpdate = this.temperature() - 1;
     this.tempOutput.emit(this.tempUpdate);
   }
 
   onInputUmbral(event: Event) {
-<<<<<<< HEAD
-    let inputElement = event.target as HTMLInputElement;
-    try {
-      let umbral = Number(inputElement.value);
-      console.log('Se establece nuevo: ${umbral)');
-=======
     const inputElement = event.target as HTMLInputElement;
     const umbral = Number(inputElement.value);
 
@@ -41,7 +35,6 @@ export class ControlTemperatureComponent {
       inputElement.value = (this.umbral() ?? 0).toString();
     } else {
       console.log(`Se establece nuevo: ${umbral}`);
->>>>>>> 0460838 (replace try catch for if else in onInputUmbral())
       this.umbralOutput.emit(umbral);
     }
   }
